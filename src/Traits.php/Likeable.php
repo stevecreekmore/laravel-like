@@ -2,21 +2,22 @@
 
 namespace SteveCreekmore\LaravelLike\Traits;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 trait Likeable
 {
-
     public function isLikedBy(Model $user): bool
     {
         if (\is_a($user, config('like.user_model') ?? config('auth.providers.users.model'))) {
             if ($this->relationLoaded('likers')) {
                 return $this->likers()->contains($user);
             }
+
             return $this->likers()->where(\config('like.user_foreign_key'), $user->getKey())->exists();
         }
+
         return false;
     }
 

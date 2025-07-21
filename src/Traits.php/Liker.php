@@ -107,7 +107,7 @@ trait Liker
         });
 
         $attachStatus = function ($likeable) use ($likes, $resolver) {
-            $resolver = $resolver ?? fn($m) => $m;
+            $resolver = $resolver ?? fn ($m) => $m;
             $likeable = $resolver($likeable);
 
             if ($likeable && \in_array(Likeable::class, \class_uses_recursive($likeable))) {
@@ -150,9 +150,6 @@ namespace SteveCreekmore\LaravelLike\Events;
 
 use Illuminate\Database\Eloquent\Model;
 use SteveCreekmore\LaravelLike\Like;
-use Illuminate\Database\Eloquent\Casts\Attribute;
-
-
 
 trait Liker
 {

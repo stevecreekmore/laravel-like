@@ -10,7 +10,6 @@ use SteveCreekmore\LaravelLike\Events\Unliked;
 
 class Like extends Model
 {
-
     protected $guarded = [];
 
     protected $dispatchesEvents = [

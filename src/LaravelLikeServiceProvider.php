@@ -4,7 +4,6 @@ namespace stevecreekmore\LaravelLike;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use stevecreekmore\LaravelLike\Commands\LaravelLikeCommand;
 
 class LaravelLikeServiceProvider extends PackageServiceProvider
 {
