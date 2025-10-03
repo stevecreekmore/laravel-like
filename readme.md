@@ -87,42 +87,6 @@ Returns an array of IDs of the users a user is liking, and who is liking a user
 auth()->user()->getLikingAndLikersIds()
 ```
 
-Caches the IDs of the users a user is licking. Default is 1 day.
-```php
-// 1 day
-auth()->user()->cacheLiking();
-
-// 1 hour
-auth()->user()->cacheLiking(3600);
-
-// 1 month
-auth()->user()->cacheLiking(Carbon::addMonth());
-```
-
-Returns an array of IDs of the users a user is liking.
-```php
-auth()->user()->getLikingCache();
-```
-
-Caches the IDs of the users who are liking a user. Default is 1 day.
-```php
-auth()->user()->cacheLikers();
-```
-
-Returns an array of IDs of the users who are liking a user.
-```php
-auth()->user()->getLikersCache();
-```
-
-Clears the Liking cache
-```php
-auth()->user()->clearLikingCache();
-```
-
-Clears the Likers cache
-```php
-auth()->user()->clearLikersCache();
-```
 
 ## Testing
 
