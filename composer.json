@@ -13,7 +13,7 @@
     "homepage": "https://github.com/stevecreekmore/laravel-like",
     "keywords": [
         "Laravel",
-        "LLike",
+        "Laravel Like",
         "Like users"
     ],
     "require": {
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "stevecreekmore\\LaravelLike\\LLikeServiceProvider"
+                "stevecreekmore\\LaravelLike\\LaravelLikeServiceProvider"
             ],
             "aliases": {
                 "LBlock": "stevecreekmore\\LaravelLike\\Facades\\LaravelLike"
